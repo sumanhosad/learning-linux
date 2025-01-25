@@ -1,10 +1,7 @@
 ---
-
-```markdown
 # Configuring and Verifying Network Connections in Linux
 
 In Linux, network configuration and verification can be achieved using tools like `ip addr`, `ip route`, and `ping`. These commands provide control over IP addresses, routes, and connectivity testing.
-
 ---
 
 ## **1. Viewing and Configuring IP Addresses**
