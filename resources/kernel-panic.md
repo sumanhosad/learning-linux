@@ -1,4 +1,5 @@
-#### Kernel-panic
+#### Kernel-Panic
+
 # Kernel Panic in Linux
 
 A **kernel panic** in Linux is a critical error that occurs when the kernel (the core of the operating system) encounters an unrecoverable problem. It indicates a failure that the kernel cannot resolve or safely continue operating with, leading to a system halt or reboot.
@@ -6,21 +7,26 @@ A **kernel panic** in Linux is a critical error that occurs when the kernel (the
 ---
 
 ## Common Causes of Kernel Panic
+
 1. **Hardware Issues**:
+
    - Faulty RAM
    - Failing hard drives
    - Overheating components
 
 2. **Driver Issues**:
+
    - Incorrect or outdated device drivers
    - Conflicts between drivers
 
 3. **Software Issues**:
+
    - Corrupted filesystems
    - Bugs in kernel modules
    - Incompatible software updates
 
 4. **Resource Exhaustion**:
+
    - Running out of memory or other critical resources
 
 5. **Configuration Problems**:
@@ -32,12 +38,14 @@ A **kernel panic** in Linux is a critical error that occurs when the kernel (the
 ## What to Do When Kernel Panic Happens
 
 ### 1. Immediate Steps
+
 - **Observe the Error Message**: Note down the details, especially references to specific modules or files (e.g., `EIP`, `PID`, or stack traces).
 - **Reboot the System**: Manually restart the computer (Ctrl+Alt+Del or the power button).
 
 ---
 
 ### 2. Basic Troubleshooting
+
 - **Boot into Safe Mode**:
   - Use the **GRUB menu** to boot into recovery mode or single-user mode for troubleshooting.
 - **Check Logs**:
@@ -60,6 +68,7 @@ A **kernel panic** in Linux is a critical error that occurs when the kernel (the
 ---
 
 ### 3. Long-Term Fixes
+
 - **Update Drivers and Kernel**:
   - Ensure you're running the latest kernel and device drivers:
     ```bash
@@ -83,6 +92,7 @@ A **kernel panic** in Linux is a critical error that occurs when the kernel (the
 ---
 
 ### 4. If the Issue Persists
+
 - **Reinstall the Kernel**:
   - Remove and reinstall the kernel package.
 - **Rollback Changes**:
@@ -93,6 +103,7 @@ A **kernel panic** in Linux is a critical error that occurs when the kernel (the
 ---
 
 ### 5. Preventative Measures
+
 - Regularly back up important data.
 - Maintain an up-to-date system.
 - Use reliable hardware and test new components.

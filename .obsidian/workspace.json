@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "resources/kernel-panic.md",
+                "file": "resources/Kernel-module.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "kernel-panic"
+              "title": "Kernel-module"
             }
           }
         ]
@@ -164,9 +164,14 @@
   },
   "active": "08b3c7a75ef58a39",
   "lastOpenFiles": [
+    "resources/Linux-Network.md~",
+    "resources/Linux-Network.md",
+    "resources/kernel-panic.md~",
+    "resources/Kernel-module 1.md",
+    "resources/Kernel-module.md",
     "Linux-server-config.md",
-    "tolearn.md",
     "resources/kernel-panic.md",
+    "tolearn.md",
     "README.md"
   ]
 }
