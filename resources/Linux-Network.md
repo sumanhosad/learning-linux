@@ -163,7 +163,3 @@ sudo ip route replace default via 192.168.1.254 dev enp0s3
 - Use `man <command>` (e.g., `man ip`) for detailed information about the commands.
 
 ---
-
-```
-
-```
