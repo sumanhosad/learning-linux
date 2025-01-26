@@ -8,7 +8,7 @@
 
 - **NetworkManager Configurations**:
   - `/etc/NetworkManager/NetworkManager.conf`: Main configuration file for NetworkManager.
-  - `/etc/sysconfig/network-scripts/ifcfg-*`: Configuration files for individual network interfaces.
+  - `/etc/NetworkManager/system-connections`: Configuration files for individual network interfaces.
 - **systemd-networkd Configurations**:
   - `/etc/systemd/network/*.network`: Network files defining the interface and configuration.
   - `/etc/systemd/network/*.netdev`: Network device configurations.
