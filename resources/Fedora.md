@@ -3,6 +3,42 @@
 #### Network
 
 ---
+#### Network Manager
+##### Files
+ - `/etc/NetworkManager/NetworkManager.conf`: Main configuration file for NetworkManager.
+  - `/etc/NetworkManager/system-connections`: Configuration files for individual network interfaces.
+##### To check network
+- **Interface and IP Configuration**:
+  - `ip addr`: Display IP addresses of all network interfaces.
+  - `ip link`: Show details of all interfaces.
+  - `ifconfig` (from `net-tools`): Displays network interfaces and their configurations.
+- **Routing Table**:
+  - `ip route`: Show routing table.
+  - `route -n` (from `net-tools`): Alternative routing table display.
+- **DNS**:
+  - `cat /etc/resolv.conf`: Show current DNS servers.
+  - `nmcli dev show | grep DNS`: Show DNS settings with NetworkManager.
+- **Active Connections**:
+  - `nmcli connection show`: Show active and saved connections.
+  - `iwconfig`: Display wireless network information.
+- **Testing Connectivity**:
+  - `ping <address>`: Check network connectivity.
+  - `traceroute <address>`: Show the route packets take to the destination.
+  
+##### ** Commands to Change Network Configuration**
+
+- **Using `nmcli` (NetworkManager Command-Line Tool)**:
+  - `nmcli connection up <connection_name>`: Activate a connection.
+  - `nmcli connection down <connection_name>`: Deactivate a connection.
+  - `nmcli device disconnect <device>`: Disconnect a device.
+  - `nmcli connection modify <connection_name> ipv4.addresses <IP/CIDR>`: Set a static IP.
+  - `nmcli connection modify <connection_name> ipv4.method manual`: Enable manual IP.
+  - `nmcli connection modify <connection_name> ipv4.gateway <gateway>`: Set the gateway.
+- **Using `ip` Command**:
+  - `ip addr add <IP>/<CIDR> dev <interface>`: Add an IP to an interface.
+  - `ip route add <destination> via <gateway>`: Add a route.
+  - `ip link set <interface> up`: Bring an interface up.
+  - `ip link set <interface> down`: Bring an interface down.
 
 ##### **1. File Names and Paths of Network Configuration Files**
 
