@@ -1,11 +1,38 @@
 #### Network
 
----
+```bash
+ls /etc/netplan
+```
+
+```bash
+systemctl is-active NetworkManager
+```
+
+```bash
+systemctl is-active systemd-networkd
+```
+
+**for Legacy ifupdown**
+
+```bash
+cat /etc/network/interfaces
+```
+
+**See Network Manager per Interface**
+
+```bash
+networkctl status
+```
+
 #### Network Manager
+
 ##### Files
- - `/etc/NetworkManager/NetworkManager.conf`: Main configuration file for NetworkManager.
-  - `/etc/NetworkManager/system-connections`: Configuration files for individual network interfaces.
+
+- `/etc/NetworkManager/NetworkManager.conf`: Main configuration file for NetworkManager.
+- `/etc/NetworkManager/system-connections`: Configuration files for individual network interfaces.
+
 ##### To check network
+
 - **Interface and IP Configuration**:
   - `ip addr`: Display IP addresses of all network interfaces.
   - `ip link`: Show details of all interfaces.
@@ -22,7 +49,7 @@
 - **Testing Connectivity**:
   - `ping <address>`: Check network connectivity.
   - `traceroute <address>`: Show the route packets take to the destination.
-  
+
 ##### ** Commands to Change Network Configuration**
 
 - **Using `nmcli` (NetworkManager Command-Line Tool)**:
@@ -37,7 +64,7 @@
   - `ip route add <destination> via <gateway>`: Add a route.
   - `ip link set <interface> up`: Bring an interface up.
   - `ip link set <interface> down`: Bring an interface down.
-  
+
 #### Netplan Static IP Configuration on Ubuntu Server
 
 This document provides a detailed guide on configuring a static IP address on an Ubuntu Server using Netplan. Netplan uses YAML syntax for network configuration, simplifying management and customization of network settings. It was introduced in Ubuntu 18.04 and is available in all later versions.
@@ -59,11 +86,13 @@ This document provides a detailed guide on configuring a static IP address on an
 ### **Netplan Configuration Overview**
 
 - **Default Configuration Locations:**
+
   - `/etc/netplan/`
   - `/lib/netplan/`
   - `/run/netplan/`
 
 - **Common Configuration Files:**
+
   - `01-netcfg.yaml`
   - `01-network-manager-all.yaml`
   - `50-cloud-init.yaml`
@@ -79,6 +108,7 @@ This document provides a detailed guide on configuring a static IP address on an
 ### **Dynamic vs. Static IP Configuration**
 
 - **Dynamic IP Address (DHCP):**
+
   - Assigned automatically by the DHCP server.
   - Easier setup but less control.
 
@@ -91,6 +121,7 @@ This document provides a detailed guide on configuring a static IP address on an
 ### **Step-by-Step Static IP Configuration**
 
 1. **Locate the Netplan Configuration File:**
+
    - Example file: `/etc/netplan/50-cloud-init.yaml`
    - If the file is missing, generate a new configuration:
      ```bash
@@ -98,6 +129,7 @@ This document provides a detailed guide on configuring a static IP address on an
      ```
 
 2. **Default DHCP Configuration Example:**
+
    ```yaml
    # This file describes the network interfaces available on your system
    # For more information, see netplan(5).
@@ -131,11 +163,13 @@ This document provides a detailed guide on configuring a static IP address on an
 **Note:** Ensure correct indentation in the YAML file to avoid syntax errors.
 
 4. **Apply Configuration:**
+
    ```bash
     sudo netplan apply
    ```
 
 5. **Debugging Configuration Issues:**
+
    - Use the debug option to troubleshoot errors:
      ```bash
       sudo netplan --debug apply
@@ -152,11 +186,14 @@ This document provides a detailed guide on configuring a static IP address on an
 ### **Your Setup: IP Addresses and Gateways**
 
 #### **Host Setup:**
+
 - **Arch Linux Host IP:** `192.168.102.249`
 - **Ubuntu Server VM IP:** `192.168.122.209`
 
 #### **Possible IP Address Ranges for Ubuntu Server:**
+
 - If you’re using a NAT-based virtual network:
+
   - Address Range: `192.168.122.2 - 192.168.122.254`
   - Example IP: `192.168.122.150`
   - Gateway: `192.168.122.1`
@@ -169,6 +206,7 @@ This document provides a detailed guide on configuring a static IP address on an
 ---
 
 ### **Example Configuration for NAT Setup**
+
 ```yaml
 network:
   version: 2
@@ -187,6 +225,7 @@ network:
 ```
 
 ### **Example Configuration for Bridged Adapter**
+
 ```yaml
 network:
   version: 2
@@ -207,6 +246,7 @@ network:
 ---
 
 ### **Final Notes**
+
 - Verify connectivity after applying changes:
   ```bash
   $ ping 8.8.8.8
@@ -235,4 +275,3 @@ network:
 #### DNS
 
 ##### Netplan-Systems
-
