@@ -392,10 +392,6 @@ networkctl status eth0  # Replace eth0 with your interface name
 
 ---
 
-#### DNS
-
-##### Netplan-Systems
-
 ##### Output of ```ip route```
 1. **Default Route:**
    ```bash
