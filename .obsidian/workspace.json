@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "resources/Linux-Network.md",
+                "file": "resources/Linux-User-Permission.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux-Network"
+              "title": "Linux-User-Permission"
             }
           },
           {
@@ -189,8 +189,9 @@
   },
   "active": "08b3c7a75ef58a39",
   "lastOpenFiles": [
-    "resources/Fedora.md",
     "resources/Linux-Network.md",
+    "resources/Linux-User-Permission.md",
+    "resources/Fedora.md",
     "resources/network.md",
     "resources/Fedora.md~",
     "resources/network.md~",
