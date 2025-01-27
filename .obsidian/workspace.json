@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Linux.md",
+                "file": "resources/Kernel-Panic.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux"
+              "title": "Kernel-Panic"
             }
           }
         ]
@@ -189,17 +189,16 @@
   },
   "active": "480048ab929a0337",
   "lastOpenFiles": [
-    "README.md",
+    "resources/Kernel-Module.md",
+    "resources/Kernel-Panic.md",
+    "resources/Linux-Dns.md",
+    "resources/Linux-Network.md",
+    "resources/Linux-User-Permission.md",
     "Linux.md",
+    "README.md",
     "resources/Git-Branch.md",
     "git.md",
-    "resources/DNS.md",
-    "resources/Linux-Dns.md",
-    "resources/Linux-User-Permission.md",
-    "resources/Kernel-module.md",
-    "resources/kernel-panic.md",
     "resources/Redhat-Configuring the DHCP Client Behavior.md",
-    "resources/Linux-Network.md",
     "resources/Fedora.md",
     "resources/network.md",
     "resources/Fedora.md~",

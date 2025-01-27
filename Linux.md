@@ -1,7 +1,7 @@
 ## Linux
-### [[kernel-panic|Kernel-panic]]
+### [[Kernel-Panic|Kernel-panic]]
 
-### [[Kernel-module|Kernel-Module]]
+### [[Kernel-Module|Kernel-Module]]
 
 ### [[Linux-Network|Linux-Network]]
 
@@ -9,5 +9,5 @@
 
 ### [[Linux-User-Permission#1. **Creating a New User**|Linux-User]]
 
-### [[DNS#DNS|Linux-DNS]]
+### [[Linux-Dns#DNS|Linux-DNS]]
 
