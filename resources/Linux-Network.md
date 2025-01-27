@@ -1,162 +1,277 @@
----
-# Configuring and Verifying Network Connections in Linux
-
-In Linux, network configuration and verification can be achieved using tools like `ip addr`, `ip route`, and `ping`. These commands provide control over IP addresses, routes, and connectivity testing.
----
-
-## **1. Viewing and Configuring IP Addresses**
-
-### Viewing IP Addresses
-
-Use the `ip addr` command to view details about network interfaces and their IP addresses:
+#### Network
 
 ```bash
-ip addr
+ls /etc/netplan
 ```
-
-Output example:
-
-```
-2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    inet 192.168.1.10/24 brd 192.168.1.255 scope global dynamic enp0s3
-       valid_lft 86399sec preferred_lft 86399sec
-```
-
-- `inet 192.168.1.10/24`: The IPv4 address and subnet mask of the interface.
-- `state UP`: Indicates the interface is active.
-
-### Configuring an IP Address
-
-To assign a static IP address to a network interface:
 
 ```bash
-sudo ip addr add 192.168.1.100/24 dev enp0s3
+systemctl is-active NetworkManager
 ```
-
-To remove an IP address:
 
 ```bash
-sudo ip addr del 192.168.1.100/24 dev enp0s3
+systemctl is-active systemd-networkd
 ```
 
----
-
-## **2. Viewing and Configuring Routes**
-
-### Viewing Routes
-
-To view the current routing table, use:
+**for Legacy ifupdown**
 
 ```bash
-ip route
+cat /etc/network/interfaces
 ```
 
-Output example:
-
-```
-default via 192.168.1.1 dev enp0s3 proto dhcp src 192.168.1.10 metric 100
-192.168.1.0/24 dev enp0s3 proto kernel scope link src 192.168.1.10
-```
-
-- `default via 192.168.1.1`: Default gateway through which traffic to unknown networks is routed.
-- `192.168.1.0/24`: Local subnet routing entry.
-
-### Configuring Routes
-
-To add a route to a specific network:
+**See Network Manager per Interface**
 
 ```bash
-sudo ip route add 192.168.2.0/24 via 192.168.1.1 dev enp0s3
+networkctl status
 ```
 
-To delete a route:
+#### Network Manager
 
-```bash
-sudo ip route del 192.168.2.0/24
-```
+##### Files
 
-To change the default gateway:
+- `/etc/NetworkManager/NetworkManager.conf`: Main configuration file for NetworkManager.
+- `/etc/NetworkManager/system-connections`: Configuration files for individual network interfaces.
 
-```bash
-sudo ip route replace default via 192.168.1.254 dev enp0s3
-```
+##### To check network
+
+- **Interface and IP Configuration**:
+  - `ip addr`: Display IP addresses of all network interfaces.
+  - `ip link`: Show details of all interfaces.
+  - `ifconfig` (from `net-tools`): Displays network interfaces and their configurations.
+- **Routing Table**:
+  - `ip route`: Show routing table.
+  - `route -n` (from `net-tools`): Alternative routing table display.
+- **DNS**:
+  - `cat /etc/resolv.conf`: Show current DNS servers.
+  - `nmcli dev show | grep DNS`: Show DNS settings with NetworkManager.
+- **Active Connections**:
+  - `nmcli connection show`: Show active and saved connections.
+  - `iwconfig`: Display wireless network information.
+- **Testing Connectivity**:
+  - `ping <address>`: Check network connectivity.
+  - `traceroute <address>`: Show the route packets take to the destination.
+
+##### ** Commands to Change Network Configuration**
+
+- **Using `nmcli` (NetworkManager Command-Line Tool)**:
+  - `nmcli connection up <connection_name>`: Activate a connection.
+  - `nmcli connection down <connection_name>`: Deactivate a connection.
+  - `nmcli device disconnect <device>`: Disconnect a device.
+  - `nmcli connection modify <connection_name> ipv4.addresses <IP/CIDR>`: Set a static IP.
+  - `nmcli connection modify <connection_name> ipv4.method manual`: Enable manual IP.
+  - `nmcli connection modify <connection_name> ipv4.gateway <gateway>`: Set the gateway.
+- **Using `ip` Command**:
+  - `ip addr add <IP>/<CIDR> dev <interface>`: Add an IP to an interface.
+  - `ip route add <destination> via <gateway>`: Add a route.
+  - `ip link set <interface> up`: Bring an interface up.
+  - `ip link set <interface> down`: Bring an interface down.
+
+#### Netplan Static IP Configuration on Ubuntu Server
+
+This document provides a detailed guide on configuring a static IP address on an Ubuntu Server using Netplan. Netplan uses YAML syntax for network configuration, simplifying management and customization of network settings. It was introduced in Ubuntu 18.04 and is available in all later versions.
 
 ---
 
-## **3. Testing Network Connectivity**
+### **Software Requirements and Conventions**
 
-### Using `ping` to Verify Connectivity
-
-`ping` is used to test connectivity between two hosts by sending ICMP echo requests.
-
-- To test connectivity to a remote host:
-
-  ```bash
-  ping google.com
-  ```
-
-  Output example:
-
-  ```
-  PING google.com (142.250.74.14): 56 data bytes
-  64 bytes from 142.250.74.14: icmp_seq=1 ttl=118 time=12.3 ms
-  ```
-
-- To limit the number of packets sent:
-
-  ```bash
-  ping -c 4 google.com
-  ```
-
-- To ping a specific IP address:
-  ```bash
-  ping 192.168.1.1
-  ```
+| **Category**    | **Requirements or Conventions**                |
+| --------------- | ---------------------------------------------- |
+| **System**      | Ubuntu Linux (18.04 or newer)                  |
+| **Software**    | `netplan.io`                                   |
+| **Permissions** | Root or `sudo` access                          |
+| **Conventions** | `#` - Commands executed as root                |
+|                 | `$` - Commands executed as non-privileged user |
 
 ---
 
-## **Example: Configuring and Verifying a Network Connection**
+### **Netplan Configuration Overview**
 
-1. **View Current Configuration**:
+- **Default Configuration Locations:**
 
-   ```bash
-   ip addr
-   ip route
-   ```
+  - `/etc/netplan/`
+  - `/lib/netplan/`
+  - `/run/netplan/`
 
-2. **Assign a Static IP Address**:
+- **Common Configuration Files:**
 
-   ```bash
-   sudo ip addr add 192.168.1.100/24 dev enp0s3
-   ```
+  - `01-netcfg.yaml`
+  - `01-network-manager-all.yaml`
+  - `50-cloud-init.yaml`
 
-3. **Set Default Gateway**:
+- **Renderer Options:**
+  - `networkd`: Primarily for server environments.
+  - `NetworkManager`: Typically used in desktop environments.
 
-   ```bash
-   sudo ip route add default via 192.168.1.1
-   ```
+**Note:** If no renderer is specified, `networkd` is used by default.
 
-4. **Verify Connectivity**:
+---
 
-   - Test the local gateway:
+### **Dynamic vs. Static IP Configuration**
+
+- **Dynamic IP Address (DHCP):**
+
+  - Assigned automatically by the DHCP server.
+  - Easier setup but less control.
+
+- **Static IP Address:**
+  - Manually configured on the system.
+  - Provides consistent addressing for the server.
+
+---
+
+### **Step-by-Step Static IP Configuration**
+
+1. **Locate the Netplan Configuration File:**
+
+   - Example file: `/etc/netplan/50-cloud-init.yaml`
+   - If the file is missing, generate a new configuration:
      ```bash
-     ping 192.168.1.1
-     ```
-   - Test external connectivity:
-     ```bash
-     ping google.com
+     $ sudo netplan generate
      ```
 
-5. **Check Updated Routes**:
-   ```bash
-   ip route
+2. **Default DHCP Configuration Example:**
+
+   ```yaml
+   # This file describes the network interfaces available on your system
+   # For more information, see netplan(5).
+   network:
+     version: 2
+     renderer: networkd
+     ethernets:
+       enp0s3:
+         dhcp4: yes
    ```
 
+3. **Change to Static IP Configuration:**
+   Replace the DHCP configuration with the following:
+   ```yaml
+   network:
+     version: 2
+     renderer: networkd
+     ethernets:
+       enp0s3:
+         dhcp4: false
+         dhcp6: false
+         addresses:
+           - 192.168.1.122/24
+         routes:
+           - to: default
+             via: 192.168.1.1
+         nameservers:
+           addresses: [8.8.8.8, 8.8.4.4]
+   ```
+
+**Note:** Ensure correct indentation in the YAML file to avoid syntax errors.
+
+4. **Apply Configuration:**
+
+   ```bash
+    sudo netplan apply
+   ```
+
+5. **Debugging Configuration Issues:**
+
+   - Use the debug option to troubleshoot errors:
+     ```bash
+      sudo netplan --debug apply
+     ```
+
+6. **Disable Cloud-Init Network Configuration:**
+   - To prevent cloud-init from overwriting manual configurations:
+     ```bash
+     $ sudo bash -c 'echo "network: {config: disabled}" > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg'
+     ```
+
 ---
 
-## **Notes**
+### **Your Setup: IP Addresses and Gateways**
 
-- Configuration made with `ip` commands is temporary and will reset after a reboot. To make it persistent, modify the network configuration files (e.g., `/etc/network/interfaces` or `/etc/netplan/` depending on your distribution).
-- Use `man <command>` (e.g., `man ip`) for detailed information about the commands.
+#### **Host Setup:**
+
+- **Arch Linux Host IP:** `192.168.102.249`
+- **Ubuntu Server VM IP:** `192.168.122.209`
+
+#### **Possible IP Address Ranges for Ubuntu Server:**
+
+- If you’re using a NAT-based virtual network:
+
+  - Address Range: `192.168.122.2 - 192.168.122.254`
+  - Example IP: `192.168.122.150`
+  - Gateway: `192.168.122.1`
+
+- If you’re using a Bridged Adapter:
+  - Address Range: Same as your Arch Linux subnet (e.g., `192.168.102.0/24`)
+  - Example IP: `192.168.102.150`
+  - Gateway: `192.168.102.1`
 
 ---
+
+### **Example Configuration for NAT Setup**
+
+```yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: false
+      dhcp6: false
+      addresses:
+        - 192.168.122.150/24
+      routes:
+        - to: default
+          via: 192.168.122.1
+      nameservers:
+        addresses: [8.8.8.8, 8.8.4.4]
+```
+
+### **Example Configuration for Bridged Adapter**
+
+```yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp0s3:
+      dhcp4: false
+      dhcp6: false
+      addresses:
+        - 192.168.102.150/24
+      routes:
+        - to: default
+          via: 192.168.102.1
+      nameservers:
+        addresses: [1.1.1.1, 8.8.8.8]
+```
+
+---
+
+### **Final Notes**
+
+- Verify connectivity after applying changes:
+  ```bash
+  $ ping 8.8.8.8
+  $ ping google.com
+  ```
+- For troubleshooting, check logs:
+  ```bash
+  $ sudo journalctl -u systemd-networkd
+  ```
+
+##### ** Commands to Change Network Configuration**
+
+- **Using `nmcli` (NetworkManager Command-Line Tool)**:
+  - `nmcli connection up <connection_name>`: Activate a connection.
+  - `nmcli connection down <connection_name>`: Deactivate a connection.
+  - `nmcli device disconnect <device>`: Disconnect a device.
+  - `nmcli connection modify <connection_name> ipv4.addresses <IP/CIDR>`: Set a static IP.
+  - `nmcli connection modify <connection_name> ipv4.method manual`: Enable manual IP.
+  - `nmcli connection modify <connection_name> ipv4.gateway <gateway>`: Set the gateway.
+- **Using `ip` Command**:
+  - `ip addr add <IP>/<CIDR> dev <interface>`: Add an IP to an interface.
+  - `ip route add <destination> via <gateway>`: Add a route.
+  - `ip link set <interface> up`: Bring an interface up.
+  - `ip link set <interface> down`: Bring an interface down.
+
+#### DNS
+
+##### Netplan-Systems
