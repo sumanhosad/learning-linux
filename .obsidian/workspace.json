@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c2bae347e73ee415",
+        "id": "42102738e04eecf4",
         "type": "tabs",
         "children": [
           {
-            "id": "08b3c7a75ef58a39",
+            "id": "480048ab929a0337",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "resources/Untitled.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
-            }
-          },
-          {
-            "id": "226ff02d8159b80c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "resources/Redhat-Configuring the DHCP Client Behavior.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Redhat-Configuring the DHCP Client Behavior"
+              "title": "README"
             }
           }
         ]
@@ -168,13 +154,27 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "226ff02d8159b80c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "resources/Redhat-Configuring the DHCP Client Behavior.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Redhat-Configuring the DHCP Client Behavior"
+            }
           }
         ],
         "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 433.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,26 +187,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "08b3c7a75ef58a39",
+  "active": "480048ab929a0337",
   "lastOpenFiles": [
-    "resources/Linux-Network.md",
-    "resources/Untitled.md",
+    "README.md",
+    "Linux.md",
+    "resources/Git-Branch.md",
+    "git.md",
+    "resources/DNS.md",
+    "resources/Linux-Dns.md",
     "resources/Linux-User-Permission.md",
+    "resources/Kernel-module.md",
+    "resources/kernel-panic.md",
+    "resources/Redhat-Configuring the DHCP Client Behavior.md",
+    "resources/Linux-Network.md",
     "resources/Fedora.md",
     "resources/network.md",
     "resources/Fedora.md~",
     "resources/network.md~",
-    "resources/Redhat-Configuring the DHCP Client Behavior.md",
-    "resources/Kernel-module.md",
     "resources/Linux-Network.md~",
     "Linux-server-config.md~",
     "resources/Linux-Dns.md~",
-    "resources/Linux-Dns.md",
     "resources/kernel-panic.md~",
     "resources/Kernel-module 1.md",
     "Linux-server-config.md",
-    "resources/kernel-panic.md",
-    "tolearn.md",
-    "README.md"
+    "tolearn.md"
   ]
 }
