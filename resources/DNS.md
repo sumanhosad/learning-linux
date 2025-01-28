@@ -21,7 +21,7 @@ When resolving a DNS query, four types of DNS servers work together:
 7. The resolver sends the IP to the client.
 8. The client connects to the origin server using the IP and retrieves the website data.
 ---
-![[Pasted image 20250128202913.png]]
+![[Pasted image 20250128203439.png]]
 
 ---
 
