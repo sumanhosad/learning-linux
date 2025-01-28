@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DNS.md",
+                "file": "resources/DNS.md",
                 "mode": "source",
                 "source": false
               },
@@ -216,12 +216,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9066db2638322b79",
+  "active": "9fca07bbc6416023",
   "lastOpenFiles": [
     "Pasted image 20250128202913.png",
     "Pasted image 20250128202024.png",
     "![[Pasted.md",
-    "DNS.md",
+    "resources/DNS.md",
     "Pasted image 20250128201912.png",
     "resources/Linux-Network.md",
     "resources/1-28 Tuesday, Jan.md",
