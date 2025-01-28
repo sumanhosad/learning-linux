@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "resources/DHCP.md",
+                "file": "resources/Linux-Network.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DHCP"
+              "title": "Linux-Network"
             }
           },
           {
@@ -204,9 +204,9 @@
   "active": "480048ab929a0337",
   "lastOpenFiles": [
     "resources/1-28 Tuesday, Jan.md",
+    "resources/Linux-Network.md",
     "resources/DHCP.md",
     "Rough.md",
-    "resources/Linux-Network.md",
     "Linux.md",
     "resources/Kernel-Panic.md",
     "resources/Kernel-Module.md",
