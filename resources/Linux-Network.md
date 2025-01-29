@@ -64,6 +64,8 @@ networkctl status
   - `ip route add <destination> via <gateway>`: Add a route.
   - `ip link set <interface> up`: Bring an interface up.
   - `ip link set <interface> down`: Bring an interface down.
+  - `sudo ip addr del <IP_ADDRESS>/<PREFIX> dev <INTERFACE>`
+
 
 #### Netplan Static IP Configuration on Ubuntu Server
 

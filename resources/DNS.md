@@ -6,8 +6,8 @@ A DNS (Domain Name System) server acts as the internet's phonebook, converting h
 
 ### **How Do DNS Servers Resolve Queries?**
 When resolving a DNS query, four types of DNS servers work together:
-1. **Recursive Resolver (DNS Recursor):** Receives queries from the client and searches for the IP by contacting other servers.
-2. **Root Nameserver:** Directs the resolver to the correct Top-Level Domain (TLD) server (e.g., `.com`, `.org`).
+1. **[[#Recursive DNS|Recursive Resolver (DNS Recursor)]]:** Receives queries from the client and searches for the IP by contacting other servers.
+2. **[[#Root Server|Root Nameserver:]]** Directs the resolver to the correct Top-Level Domain (TLD) server (e.g., `.com`, `.org`).
 3. **TLD Nameserver:** Points to the domain’s authoritative nameserver.
 4. **Authoritative Nameserver:** Provides the final IP address of the requested domain.
 
@@ -108,3 +108,12 @@ In Linux, DNS servers can be configured to serve different roles depending on th
 | **Forwarder**       | No              | Yes               | Yes                  | Forward queries to upstream servers |
 
 Each type serves a distinct purpose, allowing Linux DNS server setups to be tailored for reliability, performance, and scalability.
+
+### Recursive DNS
+- Recursive DNS is the initial step in finding an IP address for a specific website or web domain from the Domain Name System (DNS). When a user enters a web domain into a browser, a DNS request or DNS lookup is sent to a recursive DNS server, or DNS resolver, typically managed by the user’s internet service provider (ISP). The recursive DNS resolver will either respond with the IP information from data stored in its local cache or initiate a search, querying other nameservers and ultimately retrieving the information from an authoritative DNS server.
+
+### Root Server
+- A root server, also known as a root nameserver, is a type of DNS server that is responsible for answering queries from other DNS servers and clients. These servers are typically maintained by organizations such as Internet Assigned Numbers Authority (IANA) and are responsible for answering or redirecting DNS queries to other DNS servers. In other words, root servers act as a "directory" for the entire DNS system, ensuring that domain name requests are routed to the correct IP address.
+
+ - ##### How Do Root Servers Work?
+  - The root server system is a hierarchical structure, with the root servers at the top level. When a user types a URL into their browser or a service makes a request, the DNS client begins querying the DNS system to resolve the domain name to an IP address. The process starts with a query to a root server, which checks the domain name and directs the query to the next level down in the hierarchy, typically a top-level domain (TLD) server, such as .com or .org.
