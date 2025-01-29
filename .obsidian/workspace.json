@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "resources/DNS.md",
+                "file": "Rough.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DNS"
+              "title": "Rough"
             }
           },
           {
@@ -106,7 +106,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "1d629bd51b136526",
@@ -218,12 +219,13 @@
   },
   "active": "9066db2638322b79",
   "lastOpenFiles": [
+    "resources/Redhat-Configuring the DHCP Client Behavior.md",
     "Pasted image 20250128203439.png",
     "Pasted image 20250128202913.png",
     "Pasted image 20250128202024.png",
-    "![[Pasted.md",
-    "resources/DNS.md",
     "Pasted image 20250128201912.png",
+    "resources/DNS.md",
+    "![[Pasted.md",
     "resources/Linux-Network.md",
     "resources/1-28 Tuesday, Jan.md",
     "resources/DHCP.md",
@@ -236,7 +238,6 @@
     "README.md",
     "resources/Git-Branch.md",
     "git.md",
-    "resources/Redhat-Configuring the DHCP Client Behavior.md",
     "resources/Fedora.md",
     "resources/network.md",
     "resources/Fedora.md~",
