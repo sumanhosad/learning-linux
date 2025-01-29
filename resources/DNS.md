@@ -8,8 +8,8 @@ A DNS (Domain Name System) server acts as the internet's phonebook, converting h
 When resolving a DNS query, four types of DNS servers work together:
 1. **[[#Recursive DNS|Recursive Resolver (DNS Recursor)]]:** Receives queries from the client and searches for the IP by contacting other servers.
 2. **[[#Root Server|Root Nameserver:]]** Directs the resolver to the correct Top-Level Domain (TLD) server (e.g., `.com`, `.org`).
-3. **TLD Nameserver:** Points to the domain’s authoritative nameserver.
-4. **Authoritative Nameserver:** Provides the final IP address of the requested domain.
+3. **[[#**TLD (Top-Level Domain) nameserver**|TLD Nameserver:]] Points to the domain’s authoritative nameserver.
+4. **[[#Authoritative Nameserver**|Authoritative Nameserver:]] Provides the final IP address of the requested domain.
 
 **Steps in a Complete DNS Lookup:**
 1. The resolver queries the root nameserver.
@@ -117,3 +117,12 @@ Each type serves a distinct purpose, allowing Linux DNS server setups to be tail
 
  - ##### How Do Root Servers Work?
   - The root server system is a hierarchical structure, with the root servers at the top level. When a user types a URL into their browser or a service makes a request, the DNS client begins querying the DNS system to resolve the domain name to an IP address. The process starts with a query to a root server, which checks the domain name and directs the query to the next level down in the hierarchy, typically a top-level domain (TLD) server, such as .com or .org.
+#### **TLD (Top-Level Domain) nameserver**
+ - A **TLD (Top-Level Domain) nameserver** is a critical component of the **Domain Name System (DNS)**, responsible for managing domain names at the highest level of the hierarchy. The TLD nameservers store information about domain extensions such as `.com`, `.org`, `.net`, `.edu`, and country-code TLDs like `.uk` or `.jp`. These nameservers act as intermediaries between the **root DNS servers** and the **authoritative nameservers** for specific domains. Each TLD has a designated set of nameservers that keep track of which authoritative nameservers hold the IP address records for domain names within that TLD.  
+
+ - In practice, a TLD nameserver helps route internet traffic by directing DNS queries to the appropriate authoritative nameserver for a given domain. When a user enters a website address, the query first goes to the root DNS servers, which then refer the request to the TLD nameservers for the domain extension (e.g., `.com`). The TLD nameserver, in turn, responds with the location of the authoritative nameserver responsible for that domain (e.g., `example.com`). This process ensures that browsers and other internet services can quickly and efficiently resolve domain names to their corresponding IP addresses, enabling seamless website access.
+
+##### **Authoritative Nameserver** 
+- An **Authoritative Nameserver** is a DNS server that holds the definitive records for a specific domain. Unlike recursive resolvers, which cache DNS responses temporarily, authoritative nameservers provide the official and up-to-date DNS information, such as **A records** (IP addresses), **MX records** (mail servers), and **CNAME records** (aliases). Each domain has at least one authoritative nameserver, often managed by a domain registrar, web hosting provider, or an organization’s own DNS infrastructure. These servers are the final source of truth in the DNS hierarchy, ensuring that queries for a domain receive accurate and verified responses.  
+
+- When a user requests a website, the query is first sent to a **recursive resolver**, which then contacts the **root nameservers** and the **TLD nameservers**. The TLD nameservers provide a reference to the authoritative nameserver for the requested domain. The authoritative nameserver then responds with the domain’s corresponding IP address or other requested DNS records. This process allows web browsers, email clients, and other internet applications to reliably locate and connect to the correct server for a domain. Because authoritative nameservers do not rely on caching, they ensure that DNS records remain up-to-date and reflect any recent changes made by the domain owner.
