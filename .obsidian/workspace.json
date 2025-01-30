@@ -13,22 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "resources/DNS.md",
+                "file": "Rough.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DNS"
+              "title": "Rough"
             }
           },
           {
-            "id": "8454683ffaf056c9",
+            "id": "f7005496fb8751c8",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "resources/Linux-Network.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Linux-Network"
             }
           }
         ]
@@ -87,7 +91,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "1d629bd51b136526",
@@ -199,13 +204,13 @@
   },
   "active": "9066db2638322b79",
   "lastOpenFiles": [
+    "resources/Linux-Network.md",
+    "Rough.md",
+    "resources/DNS.md",
     "Pasted image 20250128203439.png",
     "Pasted image 20250128202913.png",
     "Pasted image 20250128202024.png",
     "Pasted image 20250128201912.png",
-    "resources/DNS.md",
-    "resources/Linux-Network.md",
-    "Rough.md",
     "resources/Kernel-Module.md",
     "resources/Linux-Dns.md",
     "resources/Linux-User-Permission.md",
