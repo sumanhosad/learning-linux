@@ -34,20 +34,6 @@
               "icon": "lucide-file",
               "title": "Module 1"
             }
-          },
-          {
-            "id": "f7005496fb8751c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "resources/Linux-Network.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Linux-Network"
-            }
           }
         ],
         "currentTab": 1
@@ -220,8 +206,8 @@
   "active": "f8e75b87ef7de8f7",
   "lastOpenFiles": [
     "Rough.md",
-    "Module 1.md",
     "resources/Linux-Network.md",
+    "Module 1.md",
     "resources/DNS.md",
     "Pasted image 20250128203439.png",
     "Pasted image 20250128202913.png",
