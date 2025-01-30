@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "f8e75b87ef7de8f7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Module 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Module 1"
+            }
+          },
+          {
             "id": "f7005496fb8751c8",
             "type": "leaf",
             "state": {
@@ -35,7 +49,8 @@
               "title": "Linux-Network"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -202,10 +217,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9066db2638322b79",
+  "active": "f8e75b87ef7de8f7",
   "lastOpenFiles": [
-    "resources/Linux-Network.md",
     "Rough.md",
+    "Module 1.md",
+    "resources/Linux-Network.md",
     "resources/DNS.md",
     "Pasted image 20250128203439.png",
     "Pasted image 20250128202913.png",
