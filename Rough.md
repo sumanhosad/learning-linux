@@ -25,3 +25,12 @@
 ### Threats
 - Potential to harm Organization
 
+### Types of attacks
+### Malicious Mobile Code
+- #### Trojans - as Legitimate Attacks
+- #### Worms
+- #### Ransomware
+- #### Browser Exploits
+
+### Apt (Advanced Persistent Threat)
+

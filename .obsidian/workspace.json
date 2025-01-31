@@ -35,8 +35,7 @@
               "title": "Questions first internal"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -204,10 +203,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b0b4e33afae21ec6",
+  "active": "9066db2638322b79",
   "lastOpenFiles": [
-    "Rough.md",
     "Questions first internal.md",
+    "Rough.md",
     "resources/X3DH.md",
     "resources/DHCP.md",
     "resources/DNS.md",
