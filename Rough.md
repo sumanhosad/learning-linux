@@ -19,3 +19,9 @@
 
 ## 11. Write a note on security council 
 - #### HIPPA, GDPR , ISO
+
+
+
+### Threats
+- Potential to harm Organization
+
