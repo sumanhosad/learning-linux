@@ -1,4 +1,4 @@
-### **DHCP Overview**  
+		### **DHCP Overview**  
 DHCP dynamically assigns IP addresses and network settings to devices, simplifying network configuration. The DHCP client (`dhclient` by default) handles this process.
 
 ---
