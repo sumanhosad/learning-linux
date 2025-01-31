@@ -1,7 +1,7 @@
-## 1. Cyber security (Importance of information protection and the evolution of information security)
-## 2.List NIST Methods and objectives ()
-## 3.Explain different types of threats and attack vectors
-## 4. Discuss the principles of secure socket layer(SSL) and its roles in online security
+### 1. Cyber security (Importance of information protection and the evolution of information security)
+### 2.List NIST Methods and objectives ()
+### 3.Explain different types of threats and attack vectors
+### 4. Discuss the principles of secure socket layer(SSL) and its roles in online security
 #### Threats
   - #### SQL Injection
   - #### XSS
@@ -10,22 +10,20 @@
   - #### Phishing
   - #### Dos and DDos 
   
-## 5. Short note on Email-Worms, Trojan,  Zombies
-## 6. Short note on SQL Injection, Buffer Overflow, Arp Poisoning, Spoofing
-## 7.  Explain authentication and authorization also write a note on Single, Two and MultiFactor Authentication
-## 8. Explain COBIT and ISO 27000 Series security standards
-## 9. Explain importance of Security awareness program 
-## 10. With neat diagram explain Lollipop and Onion Model
+### 5. Short note on Email-Worms, Trojan,  Zombies
+### 6. Short note on SQL Injection, Buffer Overflow, Arp Poisoning, Spoofing
+### 7.  Explain authentication and authorization also write a note on Single, Two and MultiFactor Authentication
+### 8. Explain COBIT and ISO 27000 Series security standards
+### 9. Explain importance of Security awareness program 
+### 10. With neat diagram explain Lollipop and Onion Model
 
-## 11. Write a note on security council 
+### 11. Write a note on security council 
 - #### HIPPA, GDPR , ISO
 
+## Threats
+- #### Potential to harm Organization
 
-
-### Threats
-- Potential to harm Organization
-
-### Types of attacks
+## Types of attacks
 ### Malicious Mobile Code
 - #### Trojans - as Legitimate Attacks
 - #### Worms
@@ -34,3 +32,7 @@
 
 ### Apt (Advanced Persistent Threat)
 
+### Manual Attacks
+- #### Social Engineering
+- #### Credential Stuffing
+- #### Brute-Force
