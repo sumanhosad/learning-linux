@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9066db2638322b79",
+            "id": "591ef2f71a06eb9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "Rough"
             }
-          },
-          {
-            "id": "b0b4e33afae21ec6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Questions first internal.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Questions first internal"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -204,10 +189,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b0b4e33afae21ec6",
+  "active": "591ef2f71a06eb9e",
   "lastOpenFiles": [
-    "Rough.md",
     "Questions first internal.md",
+    "Rough.md",
     "resources/X3DH.md",
     "resources/DHCP.md",
     "resources/DNS.md",
