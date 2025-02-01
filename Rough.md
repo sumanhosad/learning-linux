@@ -42,6 +42,9 @@
 ##### GDPR (General Data Protectioon Regulation)
 ##### HIPPA (Health Insurance Portability and Accountability Act)
 
+
+
+
 #### Lollipop Model
 ###### Key Characteristics
 - single layer
@@ -50,3 +53,15 @@
 
 #### Onion Model
 ###### Key Characteristics
+-  Multi Layered approach
+- Security increases as you go deep
+- Zero trust approach
+#### Zones of trust
+- public: Website Home page
+- DMZ: Payment Processing Server
+- Internal: Customer account data
+- Restricted: Credit card details
+
+#### Best practices for Network Defense
+- Secure Physical defense
+- Harden OS 

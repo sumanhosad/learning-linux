@@ -190,7 +190,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 433.5
+    "width": 337.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -203,7 +203,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "591ef2f71a06eb9e",
+  "active": "f509450e37e98d02",
   "lastOpenFiles": [
     "Splitgram/Links/X3DH.md",
     "Rough.md",
