@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Splitgram/Links/X3DH.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "X3DH"
             }
           }
         ]
@@ -190,11 +190,18 @@
   },
   "active": "591ef2f71a06eb9e",
   "lastOpenFiles": [
-    "Linux.md",
+    "Splitgram/To Learn.md",
+    "Resources/Notes/AppLock.md",
+    "Splitgram/Links/X3DH.md",
+    "Splitgram/Links",
+    "Splitgram",
+    "Resources/Notes/Ollama.md",
+    "Resources/Notes/Linux.md",
+    "Resources/QuickLink.md",
+    "README.md",
     "Linux-User-Permission.md",
     "Linux-Dns.md",
     "Resources/Notes/Kernel-Panic.md",
-    "README.md",
     "Resources/Notes/Web3. 0.md",
     "Resources/Notes/Systemd-Networkd.md",
     "Resources/Notes/Output.md",
@@ -211,24 +218,17 @@
     "Resources/Link/Links.md",
     "Resources/Contacts/Websites.md",
     "Resources/Contacts/Contacts.md",
-    "Resources/QuickLink.md",
     "Resources/Notes",
     "Resources/Link",
     "Resources/Contacts",
     "Resources",
-    "Rough.md",
     "Pasted image 20250128201912.png",
-    "resources/Linux-Dns.md",
-    "resources/CMake.md",
-    "resources/DNS.md",
     "Pasted image 20250128203439.png",
     "Pasted image 20250128202913.png",
     "Pasted image 20250128202024.png",
     "resources/Fedora.md~",
     "resources/network.md~",
     "resources/Linux-Network.md~",
-    "Linux-server-config.md~",
-    "resources/Linux-Dns.md~",
-    "resources/kernel-panic.md~"
+    "Linux-server-config.md~"
   ]
 }
