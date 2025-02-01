@@ -72,4 +72,24 @@
 	- Host based (on Individual devices)
 - Secure Network Share Permission
 - Use encryption
-- Secure applications 
+- Secure applications
+- Backup System
+    - 3-2-1 Backup
+- Implement ARP poisoning Defenses
+    - MITM 
+    - Arp Poisoning is also known as arp spoofing
+    - It is type of MITM attack where an attacker sends falsified arp messages over a local network to link mac address with ip address of another device
+    -  This allows attacker to intercept, modify, and disturb network traffic
+    - Working Procedure
+
+| Normal ARP Process                                                                   | Spoofed ARP Process                                                                                       |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| Devices on the network use ARP to resolve IP addresses to MAC addresses.             | Attacker sends fake ARP replies associating their MAC address with the IP address of a legitimate device. |
+| When a device needs to communicate, it sends ARP requests asking, "Who has this IP?" | The victim unknowingly updates its ARP table with the attacker's MAC address.                             |
+| The target device responds with its MAC address.                                     | The victim sends traffic meant for the legitimate device to the attacker instead.                         |
+
+## CISO
+- CISO is senior Executive responsible for establishing and maintaning Oraganizations Information security statergy
+- CISO ensures data security, manage cyber risk and alligns security initiates with business goals 
+
+

@@ -1,3 +1,4 @@
+### [[Implementation X3DH#Implementation X3DH|Implementation of X3DH]]
 Below is the same comprehensive guide written in Markdown with all block math expressions enclosed using `$$` (suitable for Obsidian):
 
 ---
@@ -380,3 +381,5 @@ If you need further clarification or additional details on any part of this guid
 ---
 
 *Happy coding and secure cryptography!*
+
+##
