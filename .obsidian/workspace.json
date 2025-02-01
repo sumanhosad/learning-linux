@@ -188,8 +188,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9fca07bbc6416023",
+  "active": "591ef2f71a06eb9e",
   "lastOpenFiles": [
+    "Linux.md",
+    "Linux-User-Permission.md",
+    "Linux-Dns.md",
+    "Resources/Notes/Kernel-Panic.md",
+    "README.md",
     "Resources/Notes/Web3. 0.md",
     "Resources/Notes/Systemd-Networkd.md",
     "Resources/Notes/Output.md",
@@ -197,7 +202,6 @@
     "Resources/Notes/NetPlan.md",
     "Resources/Notes/Linux-Network.md",
     "Resources/Notes/Linux Boot.md",
-    "Resources/Notes/Kernel-Panic.md",
     "Resources/Notes/Kernel-Module.md",
     "Resources/Notes/Git.md",
     "Resources/Notes/DNS.md",
@@ -217,10 +221,6 @@
     "resources/Linux-Dns.md",
     "resources/CMake.md",
     "resources/DNS.md",
-    "AppLock.md",
-    "resources/Linux-User-Permission.md",
-    "Linux.md",
-    "README.md",
     "Pasted image 20250128203439.png",
     "Pasted image 20250128202913.png",
     "Pasted image 20250128202024.png",
