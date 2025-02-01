@@ -21,9 +21,6 @@ When resolving a DNS query, four types of DNS servers work together:
 7. The resolver sends the IP to the client.
 8. The client connects to the origin server using the IP and retrieves the website data.
 ---
-![[Pasted image 20250128203439.png]]
-
----
 
 ### **What is DNS Caching?**
 DNS caching allows recursive resolvers to temporarily store DNS query results to improve speed and reduce server load. Cached data is valid only for a specific time-to-live (TTL) period, usually 24–48 hours, after which the resolver must retrieve a fresh IP address. 
@@ -53,10 +50,6 @@ In essence, DNS servers are critical for ensuring smooth and secure internet con
 ### **Four Types of DNS Servers in Linux**
 
 In Linux, DNS servers can be configured to serve different roles depending on the network’s needs. Here’s an overview of the four main types:
-
-
----
-![[Pasted image 20250128202024.png|Types of Dns servers]]
 
 ---
 #### **1. Primary/Master DNS Server**

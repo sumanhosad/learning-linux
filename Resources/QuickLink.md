@@ -1,0 +1,4 @@
+- ### QuickLink 
+    - #### [[Linux#Linux|Linux]]
+    - #### [[On Evo/Resources/Notes/Git|Git]]
+    - ##### [[Web3. 0#Web 3.0|Web 3.0]] 

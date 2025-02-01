@@ -1,4 +1,4 @@
-#### Kernel-Panic
+#### Kernel-panic
 
 # Kernel Panic in Linux
 

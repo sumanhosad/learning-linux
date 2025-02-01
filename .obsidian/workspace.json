@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rough.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Rough"
+              "title": "README"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "1d629bd51b136526",
@@ -189,40 +188,47 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "591ef2f71a06eb9e",
+  "active": "9fca07bbc6416023",
   "lastOpenFiles": [
-    "Questions first internal.md",
+    "Resources/Notes/Web3. 0.md",
+    "Resources/Notes/Systemd-Networkd.md",
+    "Resources/Notes/Output.md",
+    "Resources/Notes/Network-Manager.md",
+    "Resources/Notes/NetPlan.md",
+    "Resources/Notes/Linux-Network.md",
+    "Resources/Notes/Linux Boot.md",
+    "Resources/Notes/Kernel-Panic.md",
+    "Resources/Notes/Kernel-Module.md",
+    "Resources/Notes/Git.md",
+    "Resources/Notes/DNS.md",
+    "Resources/Notes/DHCP.md",
+    "Resources/Notes/CMake.md",
+    "Resources/Notes/BlockChain.md",
+    "Resources/Link/Links.md",
+    "Resources/Contacts/Websites.md",
+    "Resources/Contacts/Contacts.md",
+    "Resources/QuickLink.md",
+    "Resources/Notes",
+    "Resources/Link",
+    "Resources/Contacts",
+    "Resources",
     "Rough.md",
-    "resources/X3DH.md",
-    "resources/DHCP.md",
-    "resources/DNS.md",
-    "resources/Linux-Dns.md",
-    "resources/Linux-User-Permission.md",
-    "resources/Redhat-Configuring the DHCP Client Behavior.md",
     "Pasted image 20250128201912.png",
-    "Module 1.md",
-    "resources/Linux-Network.md",
+    "resources/Linux-Dns.md",
+    "resources/CMake.md",
+    "resources/DNS.md",
+    "AppLock.md",
+    "resources/Linux-User-Permission.md",
+    "Linux.md",
+    "README.md",
     "Pasted image 20250128203439.png",
     "Pasted image 20250128202913.png",
     "Pasted image 20250128202024.png",
-    "resources/Kernel-Module.md",
-    "![[Pasted.md",
-    "resources/1-28 Tuesday, Jan.md",
-    "Linux.md",
-    "resources/Kernel-Panic.md",
-    "README.md",
-    "resources/Git-Branch.md",
-    "git.md",
-    "resources/Fedora.md",
-    "resources/network.md",
     "resources/Fedora.md~",
     "resources/network.md~",
     "resources/Linux-Network.md~",
     "Linux-server-config.md~",
     "resources/Linux-Dns.md~",
-    "resources/kernel-panic.md~",
-    "resources/Kernel-module 1.md",
-    "Linux-server-config.md",
-    "tolearn.md"
+    "resources/kernel-panic.md~"
   ]
 }
