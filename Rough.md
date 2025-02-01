@@ -23,15 +23,15 @@
   - ##### Dos and DDos 
 ### Types of attacks
 #### Malicious Mobile Code
-- ##### Trojans - as Legitimate Attacks
-- ##### Worms
-- ##### Ransomware
-- ##### Browser Exploits
+- Trojans - as Legitimate Attacks
+- Worms
+- Ransomware
+- Browser Exploits
 #### Apt (Advanced Persistent Threat)
 #### Manual Attacks
-- ##### Social Engineering
-- ##### Credential Stuffing
-- ##### Brute-Force
+- Social Engineering
+- Credential Stuffing
+- Brute-Force
 
 ##### COBIT (Control Objectives for Information and RElated Technologies)
 #### ISO 27000 series
@@ -57,7 +57,7 @@
 - Security increases as you go deep
 - Zero trust approach
 #### Zones of trust
-- public: Website Home page
+- Public: Website Home page
 - DMZ: Payment Processing Server
 - Internal: Customer account data
 - Restricted: Credit card details
@@ -65,3 +65,9 @@
 #### Best practices for Network Defense
 - Secure Physical defense
 - Harden OS 
+- Keeping Patches updated
+- Antivirus  
+- Firewall
+	-  Network based
+	- Host based (on Individual devices)
+- Secure Network Share Permission
