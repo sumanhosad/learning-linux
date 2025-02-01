@@ -71,3 +71,5 @@
 	-  Network based
 	- Host based (on Individual devices)
 - Secure Network Share Permission
+- Use encryption
+- Secure applications 
