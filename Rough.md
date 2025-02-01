@@ -41,3 +41,12 @@
 ##### NIST (National Institute of Standards and Technology)
 ##### GDPR (General Data Protectioon Regulation)
 ##### HIPPA (Health Insurance Portability and Accountability Act)
+
+#### Lollipop Model
+###### Key Characteristics
+- single layer
+- strong perimeter but once attacker gets inside internal security is weak
+- Risk of complete compromise
+
+#### Onion Model
+###### Key Characteristics
